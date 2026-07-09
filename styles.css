@@ -1883,3 +1883,77 @@ html {
     border-radius: 22px;
   }
 }
+
+/* --- NeXR FINAL: реальные изображения из папки assets --- */
+/* Этот блок намеренно стоит в самом конце, чтобы перебить старые CSS-иконки и заглушки. */
+.service-card .service-icon,
+.benefit-card .why-icon {
+  position: relative;
+  z-index: 2;
+  width: 72px;
+  height: 72px;
+  display: block;
+  margin-bottom: 24px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 24px;
+  background: transparent;
+  box-shadow: 0 0 26px rgba(168, 85, 247, 0.14);
+}
+
+.service-card .service-icon::before,
+.service-card .service-icon::after,
+.benefit-card .why-icon::before,
+.benefit-card .why-icon::after {
+  content: none !important;
+  display: none !important;
+}
+
+.service-card .service-icon img,
+.benefit-card .why-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.examples-grid .example-preview {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 24px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(196, 139, 255, 0.24);
+  background: rgba(18, 12, 34, 0.78);
+  box-shadow:
+    inset 0 0 26px rgba(168, 85, 247, 0.10),
+    0 0 32px rgba(168, 85, 247, 0.10);
+}
+
+.examples-grid .example-preview::before,
+.examples-grid .example-preview::after {
+  content: none !important;
+  display: none !important;
+}
+
+.examples-grid .example-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+@media (max-width: 560px) {
+  .service-card .service-icon,
+  .benefit-card .why-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 22px;
+  }
+}
