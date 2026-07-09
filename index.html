@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="top-anchor" id="top" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
   <div class="noise" aria-hidden="true"></div>
   <div class="page-bg" aria-hidden="true">
@@ -23,7 +24,7 @@
     <div class="bg-orb bg-orb-three"></div>
   </div>
 
-  <header class="site-header" id="top">
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="NeXR — на главную">
         <span class="brand-mark" aria-hidden="true">N</span>
@@ -200,22 +201,22 @@
 
         <div class="benefit-grid">
           <div class="benefit-card reveal">
-            <span>◇</span>
+            <span class="benefit-icon design-benefit" aria-hidden="true"></span>
             <h3>Современный дизайн</h3>
             <p>Тёмный premium-tech стиль, аккуратная типографика, контраст и визуальная глубина.</p>
           </div>
           <div class="benefit-card reveal">
-            <span>⚡</span>
+            <span class="benefit-icon automation-benefit" aria-hidden="true"></span>
             <h3>Автоматизация</h3>
             <p>Боты и интеграции экономят время, принимают заявки и разгружают повторяющиеся действия.</p>
           </div>
           <div class="benefit-card reveal">
-            <span>↗</span>
+            <span class="benefit-icon result-benefit" aria-hidden="true"></span>
             <h3>Фокус на результате</h3>
             <p>Каждый блок ведёт к действию: написать, оставить заявку, выбрать услугу, перейти в Telegram.</p>
           </div>
           <div class="benefit-card reveal">
-            <span>✦</span>
+            <span class="benefit-icon style-benefit" aria-hidden="true"></span>
             <h3>Единый стиль</h3>
             <p>Сайт, бот, баннеры и Telegram-упаковка выглядят как одна система, а не набор случайных элементов.</p>
           </div>
@@ -266,19 +267,44 @@
 
         <div class="examples-grid">
           <article class="example-card reveal">
-            <div class="example-visual bot-visual"></div>
+            <div class="example-visual bot-visual" aria-hidden="true">
+              <span class="bot-bubble bot-bubble-left"></span>
+              <span class="bot-bubble bot-bubble-right"></span>
+              <div class="bot-figure">
+                <span class="bot-antenna"></span>
+                <span class="bot-eye bot-eye-left"></span>
+                <span class="bot-eye bot-eye-right"></span>
+                <span class="bot-mouth"></span>
+              </div>
+            </div>
             <span>Telegram-бот</span>
             <h3>Бот для заявок и консультаций</h3>
             <p>Клиент выбирает услугу, отвечает на вопросы, а заявка приходит вам в Telegram.</p>
           </article>
           <article class="example-card reveal">
-            <div class="example-visual site-visual"></div>
+            <div class="example-visual site-visual" aria-hidden="true">
+              <div class="site-window">
+                <div class="site-window-top"><span></span><span></span><span></span></div>
+                <div class="site-window-body">
+                  <span class="site-line site-line-wide"></span>
+                  <span class="site-line site-line-mid"></span>
+                  <div class="site-blocks"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+            </div>
             <span>Сайт</span>
             <h3>Лендинг под услугу</h3>
             <p>Короткая продающая страница с оффером, преимуществами, ценами и кнопкой связи.</p>
           </article>
           <article class="example-card reveal">
-            <div class="example-visual promo-visual"></div>
+            <div class="example-visual promo-visual" aria-hidden="true">
+              <div class="channel-icon">
+                <span class="channel-plane"></span>
+              </div>
+              <div class="channel-panel">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
             <span>Продвижение</span>
             <h3>Упаковка Telegram-канала</h3>
             <p>Аватар, описание, закреп, рубрики, баннеры и понятная логика продвижения.</p>

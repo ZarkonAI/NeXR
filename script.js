@@ -45,3 +45,28 @@ magneticItems.forEach((item) => {
     item.style.transform = '';
   });
 });
+
+// Надёжная прокрутка по якорям: логотип NeXR и кнопка «Наверх» всегда возвращают к началу страницы.
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (event) => {
+    const href = anchor.getAttribute('href');
+    if (!href || href === '#') return;
+
+    const targetId = href.slice(1);
+    const target = document.getElementById(targetId);
+    if (!target && targetId !== 'top') return;
+
+    event.preventDefault();
+    document.body.classList.remove('menu-open');
+    menuButton?.setAttribute('aria-expanded', 'false');
+
+    if (targetId === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+      return;
+    }
+
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.replaceState(null, '', `#${targetId}`);
+  });
+});
