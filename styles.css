@@ -13,7 +13,7 @@
   --violet: #8e2bff;
   --violet-2: #c58bff;
   --cyan: #00e5ff;
-  --lime: #a6ff00;
+  --lime: #7df9ff;
   --pink: #f052ff;
   --shadow: 0 26px 90px rgba(0, 0, 0, 0.42);
   --glow: 0 0 34px rgba(142, 43, 255, 0.55), 0 0 90px rgba(142, 43, 255, 0.24);
@@ -1818,4 +1818,68 @@ html {
   .bot-bubble-left { left: 18px; }
   .bot-bubble-right { right: 18px; }
   .channel-panel { right: 18px; bottom: 20px; width: 82px; }
+}
+/* Asset images: services, benefits and examples */
+.service-icon,
+.why-icon {
+  position: relative;
+  z-index: 1;
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-bottom: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(196, 139, 255, 0.28);
+  background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.18), rgba(15, 10, 28, 0.78));
+  box-shadow:
+    inset 0 0 22px rgba(168, 85, 247, 0.10),
+    0 0 26px rgba(168, 85, 247, 0.12);
+}
+
+.service-icon::before,
+.service-icon::after {
+  content: none !important;
+  display: none !important;
+}
+
+.service-icon img,
+.why-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.example-preview {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(196, 139, 255, 0.24);
+  background: rgba(18, 12, 34, 0.78);
+  box-shadow:
+    inset 0 0 26px rgba(168, 85, 247, 0.10),
+    0 0 32px rgba(168, 85, 247, 0.10);
+}
+
+.example-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 560px) {
+  .service-icon,
+  .why-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 22px;
+  }
 }
