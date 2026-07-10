@@ -382,7 +382,7 @@ body.menu-open .menu-button span:nth-child(3) {
   min-height: calc(100vh - 96px);
   display: grid;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: 84px;
 }
 
